@@ -19,7 +19,7 @@ pipeline {
     }
     stage ('Deploy-To-Tomcat') {
       steps{
-        sshagent(['tomcat']) {
+        sshagent(['Tomcat']) {
           sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@65.0.21.164:/home/ubuntu/prod/apache-tomcat-9.0.64/webapps/webapp.war'
         }
       }
