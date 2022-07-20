@@ -1,11 +1,12 @@
 #!/bin/sh
 
+$DC_VERSION="latest"
 OWASPDC_DIRECTORY=$HOME/OWASP-Dependency-Check
 DATA_DIRECTORY="$OWASPDC_DIRECTORY/data"
 REPORT_DIRECTORY="$OWASPDC_DIRECTORY/reports"
-CACHE_DIRECTORY="$DC_DIRECTORY/data/cache"
+CACHE_DIRECTORY="$OWASPDC_DIRECTORY/data/cache"
 
-chmod -R 777 /usr/share/dependency-check
+chmod -R 777 "$OWASPDC_DIRECTORY"
 
 if [ ! -d "$DATA_DIRECTORY" ]; then
     echo "Initially creating persistent directories"
