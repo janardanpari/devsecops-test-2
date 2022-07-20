@@ -5,6 +5,8 @@ DATA_DIRECTORY="$OWASPDC_DIRECTORY/data"
 REPORT_DIRECTORY="$OWASPDC_DIRECTORY/reports"
 CACHE_DIRECTORY="$DC_DIRECTORY/data/cache"
 
+chmod -R 777 /usr/share/dependency-check
+
 if [ ! -d "$DATA_DIRECTORY" ]; then
     echo "Initially creating persistent directories"
     mkdir -p "$DATA_DIRECTORY"
@@ -16,6 +18,7 @@ fi
 if [ ! -d "$CACHE_DIRECTORY" ]; then
     echo "Initially creating persistent directory: $CACHE_DIRECTORY"
     mkdir -p "$CACHE_DIRECTORY"
+    chmod -R 777 "$CACHE_DIRECTORY"
 fi
 
 # Make sure we are using the latest version
