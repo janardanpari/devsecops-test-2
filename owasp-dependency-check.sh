@@ -6,7 +6,7 @@ DATA_DIRECTORY="$OWASPDC_DIRECTORY/data"
 REPORT_DIRECTORY="$OWASPDC_DIRECTORY/reports"
 CACHE_DIRECTORY="$OWASPDC_DIRECTORY/data/cache"
 
-chmod -R 777 "$OWASPDC_DIRECTORY"
+
 
 if [ ! -d "$DATA_DIRECTORY" ]; then
     echo "Initially creating persistent directories"
