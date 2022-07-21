@@ -45,7 +45,7 @@ pipeline {
     stage('SonarQube Analysis') {
       steps{
         script {
-                    def mvnHome = tool 'Maven 3.3.9'
+                    def mvnHome = tool 'Maven'
                     withSonarQubeEnv('sonarqube') 
                     {
                       sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=devsecops"
