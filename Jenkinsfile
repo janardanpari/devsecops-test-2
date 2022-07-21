@@ -42,17 +42,17 @@ pipeline {
        }
     }
     
-    stage('SonarQube Analysis') {
-      steps{
-        script {
-                    def mvnHome = tool 'Maven'
-                    withSonarQubeEnv('sonarqube') 
-                    {
-                      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=devsecops"
-                    }
-        }               
-      }
-    }
+//     stage('SonarQube Analysis') {
+//       steps{
+//         script {
+//                     def mvnHome = tool 'Maven'
+//                     withSonarQubeEnv('sonarqube') 
+//                     {
+//                       sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=devsecops"
+//                     }
+//         }               
+//       }
+//     }
     
     stage ('Deploy-To-Tomcat') {
       steps{
