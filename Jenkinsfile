@@ -42,12 +42,13 @@ pipeline {
        }
     }
     
-    stage('SonarQube analysis')
+    stage('SonarQube analysis'){
       steps{
         withSonarQubeEnv('sonarqube'){
           sh "mvn sonar:sonar"
         }
       }
+    }
     
     stage ('Deploy-To-Tomcat') {
       steps{
